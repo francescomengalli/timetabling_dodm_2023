@@ -158,9 +158,12 @@ def add_constraints(model_type, n_exams, n_timeslots, conflict_matrix, model):
 
 
 def solution(folder, instance, model, x, n_exams, n_timeslots):
+    # verify if the directory exists, otherwise create it
+    utput_directory = "solutions/base_penalty/"
+    os.makedirs(output_directory, exist_ok=True)
     # open the solution folder for saving the solution
-    file = open("solutions/" + folder + "/" + instance + ".sol", "w")  # 'w' for selecting "write mode"
-
+    file = open(output_directory + instance + ".sol", "w")  # 'w' for selecting "write mode"
+    
     # printing the solution
     if model.status == gp.GRB.INFEASIBLE:
         # if the model is infeasible, write "INFEASIBLE" to the solution file
