@@ -5,6 +5,7 @@ import gurobipy as gp
 import numpy as np
 import pandas as pd
 import argparse
+import os
 
 # defining the enrol matrix: it returns a 0-1 matrix where:
 # 1: the student s_i is enrolled for exam e_j
