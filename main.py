@@ -1,4 +1,4 @@
-# works with Python 3.10
+# works with Python 3.9.7
 # importing the necessary libraries
 
 import gurobipy as gp
